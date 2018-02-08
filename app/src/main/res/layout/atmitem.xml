@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/linnn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:gravity="left"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="البنك الاهلي المصري "
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:id="@+id/street"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+
+            android:text="شبين الكوم - الجامعه - شارع عمر "
+            />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/img_atm"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight=".5"
+        android:gravity="right"
+        android:src="@drawable/logo2"/>
+</LinearLayout>
+    <View
+        android:id="@+id/myview"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        />
+</LinearLayout>
