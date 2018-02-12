@@ -1,24 +1,35 @@
 package com.example.ok.atmfinder.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.widget.TextView;
 
 import com.example.ok.atmfinder.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import static com.example.ok.atmfinder.Adapter.AtmAdapter.lat;
+import static com.example.ok.atmfinder.Adapter.AtmAdapter.longit;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
+    TextView adress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        adress=(TextView)findViewById(R.id.adress);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -39,9 +50,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        Intent i = getIntent();
+
+        String Sname= i.getStringExtra("namegraund");
+        String adresss= i.getStringExtra("TiTle");
+
+        adress.setText(adresss);
+
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng sheben = new LatLng(lat,longit);
+        mMap.addMarker(new MarkerOptions()
+                .position(sheben)
+                .title(Sname)
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.mark))).showInfoWindow();
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sheben,18));
+
+
     }
 }
