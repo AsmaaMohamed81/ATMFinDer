@@ -26,7 +26,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.AtmActivity" />
+        <activity
+            android:name=".Activities.AtmActivity"
+            android:label="@string/title_activity_main2"
+
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
         <activity android:name=".Activities.Places" />
         <activity android:name=".Activities.Banks" />
         <!--
@@ -47,6 +53,10 @@
         <activity
             android:name=".Activities.Main2Activity"
             android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Main3Activity"
+            android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
