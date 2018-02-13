@@ -43,7 +43,7 @@ import static com.example.ok.atmfinder.Models.NameBank.Ahly_sab3;
 import static com.example.ok.atmfinder.Models.NameBank.Ahly_sheben;
 import static com.example.ok.atmfinder.Models.NameBank.Alex_qysna;
 import static com.example.ok.atmfinder.Models.NameBank.Alex_sheben;
-import static com.example.ok.atmfinder.Models.NameBank.CIB_menof;
+import static com.example.ok.atmfinder.Models.NameBank.CIB_qysna;
 import static com.example.ok.atmfinder.Models.NameBank.CIB_sheben;
 import static com.example.ok.atmfinder.Models.NameBank.Cairo_menof;
 import static com.example.ok.atmfinder.Models.NameBank.Cairo_sab3;
@@ -245,7 +245,7 @@ AtmModel atmModel;
 
                 lat=   CIB_menof_LAT[position];
                 longit=   CIB_menof_LNG[position];
-                adress= CIB_menof[position];
+                adress= CIB_qysna[position];
 
 
             }

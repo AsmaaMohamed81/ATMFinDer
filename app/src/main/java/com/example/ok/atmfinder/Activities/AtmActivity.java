@@ -4,6 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ok.atmfinder.Adapter.AtmAdapter;
 import com.example.ok.atmfinder.Models.AtmModel;
@@ -39,7 +45,7 @@ public class AtmActivity extends AppCompatActivity {
 
 
     String[] CIB_sheben = nameBank.CIB_sheben;
-    String[] CIB_menof = NameBank.CIB_menof;
+    String[] CIB_menof = NameBank.CIB_qysna;
 
 
     String[] AKary_sheben = NameBank.AKary_sheben;
@@ -72,6 +78,8 @@ public class AtmActivity extends AppCompatActivity {
                 AtmModel atmModel = new AtmModel(masr_menof[i]);
                 atmArray.add(atmModel);
             }
+        } else if (Banks.b == "Masr" && Places.p == "sab3") {
+            Methot_Toast();
         }
 /////////////////////////////Ahly
 
@@ -122,6 +130,8 @@ public class AtmActivity extends AppCompatActivity {
                 AtmModel atmModel = new AtmModel(Cairo_menof[i]);
                 atmArray.add(atmModel);
             }
+        } else if (Banks.b == "Cairo" && Places.p == "qysna") {
+            Methot_Toast();
         }
 
 /////////////////////////////Akary
@@ -132,6 +142,14 @@ public class AtmActivity extends AppCompatActivity {
                 AtmModel atmModel = new AtmModel(AKary_sheben[i]);
                 atmArray.add(atmModel);
             }
+        } else if (Banks.b == "Akary" && Places.p == "sab3") {
+            Methot_Toast();
+
+        } else if (Banks.b == "Akary" && Places.p == "menof") {
+            Methot_Toast();
+
+        } else if (Banks.b == "Akary" && Places.p == "qysna") {
+            Methot_Toast();
         }
 ///////////////////////CIB
 
@@ -148,6 +166,13 @@ public class AtmActivity extends AppCompatActivity {
                 atmArray.add(atmModel);
             }
         }
+
+        else if (Banks.b == "CIB" && Places.p == "sab3") {
+            Methot_Toast();
+
+        } else if (Banks.b == "CIB" && Places.p == "qysna") {
+            Methot_Toast();
+        }
 //////////////////////////////////////////Alex
         else if (Banks.b == "Alex" && Places.p == "sheben") {
             for (int i = 0; i < Alex_sheben.length; i++) {
@@ -161,6 +186,16 @@ public class AtmActivity extends AppCompatActivity {
                 AtmModel atmModel = new AtmModel(Alex_qysna[i]);
                 atmArray.add(atmModel);
             }
+        }
+
+        else if (Banks.b == "Alex" && Places.p == "menof") {
+            Methot_Toast();
+
+        }
+
+        else if (Banks.b == "Alex" && Places.p == "sab3") {
+            Methot_Toast();
+
         }
 
 //////////////////////////Eslamx
@@ -179,6 +214,13 @@ public class AtmActivity extends AppCompatActivity {
             }
         }
 
+        else if (Banks.b == "Eslamx" && Places.p == "sab3") {
+            Methot_Toast();
+
+        } else if (Banks.b == "Eslamx" && Places.p == "qysna") {
+            Methot_Toast();
+        }
+
 
 ///////////////////////////////////////
         recyclerView = (RecyclerView) findViewById(R.id.recyAtm);
@@ -189,5 +231,25 @@ public class AtmActivity extends AppCompatActivity {
         adapter = new AtmAdapter(AtmActivity.this, atmArray);
 
         recyclerView.setAdapter(adapter);
+    }
+
+    public void Methot_Toast() {
+
+        Toast toast = new Toast(AtmActivity.this);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+
+        LayoutInflater ly = getLayoutInflater();
+
+        View v = ly.inflate(R.layout.activity_toast__image_item, (ViewGroup) findViewById(R.id.lay));
+
+        TextView txt1 = (TextView) v.findViewById(R.id.textView1);
+        TextView txt2 = (TextView) v.findViewById(R.id.textView2);
+
+        txt1.setText("مرحبا بيك في بنامجنا");
+        txt2.setText("لا يوجد ماكينه للصرف لهذا الفرع ");
+
+        toast.setView(v);
+        toast.show();
     }
 }

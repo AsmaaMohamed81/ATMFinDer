@@ -44,27 +44,25 @@ public class lNG {
 
     public static Double [] Ahly_qysna_LNG={
 
-            30.555114,
-            30.555114,
-            30.555114,
-            30.555114,
+            31.136819,
+            31.139558,
+            31.141614,
+            31.171414,
 
 
 
     };
 
     public static Double [] Ahly_menof_LNG={
-            30.555114,
-            30.555114,
-            30.555114,
-            30.555114,
+            30.935034,
+            30.927007,
+            30.930402,
+            30.938584,
+            30.941333,
+            30.929366,
+            30.966532,
+            30.929558,
 
-            30.555114,
-            30.555114,
-            30.555114,
-            30.555114,
-
-            30.555114,
 
 
 
@@ -75,7 +73,7 @@ public class lNG {
     ///////////////////////////////////////////////////////////////
 
     public static Double [] masr_sheben_LNG={
-            30.555114,
+            31.012580,
 
 
     };
@@ -83,8 +81,8 @@ public class lNG {
 
     public static Double [] masr_qysna_LNG={
 
-            30.555114,
-            30.555114,
+            31.142039,
+            31.133929,
 
 
 
@@ -95,10 +93,10 @@ public class lNG {
 
     public static Double [] masr_menof_LNG={
 
-            30.555114,
-            30.555114,
-            30.555114,
-            30.555114,
+            30.936163,
+            30.933914,
+            30.965578,
+            31.029017,
 
 
 
@@ -110,7 +108,7 @@ public class lNG {
 
 
     public static Double [] Alex_sheben_LNG={
-            30.555114,
+            30.987247,
 
 
     };
@@ -118,7 +116,7 @@ public class lNG {
 
     public static Double [] Alex_qysna_LNG={
 
-            30.555114,
+            31.136131,
 
 
 
@@ -129,7 +127,7 @@ public class lNG {
 
     ////////////////////////////////////////////////////////////////
     public static Double [] Cairo_sheben_LNG={
-            30.555114,
+            31.004919,
 
 
 
@@ -139,7 +137,7 @@ public class lNG {
     public static Double [] Cairo_sab3_LNG={
 
 
-            30.555114,
+            31.083233,
 
 
 
@@ -149,7 +147,7 @@ public class lNG {
 
 
     public static Double [] Cairo_menof_LNG={
-            30.555114,
+            30.931029,
 
 
 
@@ -157,7 +155,7 @@ public class lNG {
 
     ////////////////////////////////////////////////////////////////
     public static Double [] AKary_sheben_LNG={
-            30.555114,
+            31.001691,
 
 
 
@@ -169,8 +167,7 @@ public class lNG {
 
     ////////////////////////////////////////////////////////////////
     public static Double [] Eslamx_sheben_LNG={
-            30.555114,
-            30.555114,
+            31.014082,
 
 
 
@@ -181,9 +178,9 @@ public class lNG {
 
 
     public static Double [] Eslamx_menof_LNG={
-            30.555114,
-            30.555114,
-            30.555114,
+            30.935531,
+            30.927300,
+            30.944699,
 
 
 
@@ -192,8 +189,8 @@ public class lNG {
 
     ////////////////////////////////////////////////////////////////
     public static Double [] CIB_sheben_LNG={
-            30.555114,
-            30.555114,
+            31.281896,
+            31.012779,
 
 
 
@@ -203,8 +200,8 @@ public class lNG {
 
     public static Double [] CIB_menof_LNG={
 
-            30.555114,
-            30.555114,
+            31.138623,
+            31.167440,
 
 
 
