@@ -1,12 +1,15 @@
 package com.example.ok.atmfinder.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ok.atmfinder.Adapter.AtmAdapter;
+import com.example.ok.atmfinder.Call_US;
 import com.example.ok.atmfinder.Models.AtmModel;
 import com.example.ok.atmfinder.Models.NameBank;
 import com.example.ok.atmfinder.R;
@@ -63,6 +67,21 @@ public class AtmActivity extends AppCompatActivity implements NavigationView.OnN
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atm);
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
 
         if (Banks.b == "Masr" && Places.p == "sheben") {
@@ -296,17 +315,31 @@ public class AtmActivity extends AppCompatActivity implements NavigationView.OnN
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.places) {
 
-        } else if (id == R.id.nav_slideshow) {
+            Intent i = new Intent(AtmActivity.this,Places.class);
+            startActivity(i);
 
-        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.bank) {
+            Intent i = new Intent(AtmActivity.this,Banks.class);
+            startActivity(i);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.map) {
+            Intent i = new Intent(AtmActivity.this,MapsActivity.class);
+            startActivity(i);
+
+        } else if (id == R.id.share) {
+            Intent i = new Intent(AtmActivity.this,Places.class);
+            startActivity(i);
+
+        } else if (id == R.id.we) {
+            Intent i = new Intent(AtmActivity.this,About_Us.class);
+            startActivity(i);
+
+        } else if (id == R.id.callus) {
+            Intent i = new Intent(AtmActivity.this,Call_US.class);
+            startActivity(i);
 
         }
 

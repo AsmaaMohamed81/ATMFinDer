@@ -58,7 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         adress.setText(adresss);
 
         // Add a marker in Sydney and move the camera
-        LatLng sheben = new LatLng(lat,longit);
+        LatLng sheben = new LatLng(30.555114,31.010645);
         mMap.addMarker(new MarkerOptions()
                 .position(sheben)
                 .title(Sname)
