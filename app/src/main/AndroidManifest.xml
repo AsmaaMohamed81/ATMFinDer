@@ -47,8 +47,8 @@
         <activity
             android:name=".Activities.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Call_US" android:label="@string/Call"/>
-        <activity android:name=".Activities.About_Us" android:label="@string/about"></activity>
+        <activity android:name=".Call_US" android:label="@string/Call"   android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Activities.About_Us" android:label="@string/about" android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
