@@ -124,6 +124,8 @@ AtmModel atmModel;
 
             linearLayout=(LinearLayout)itemView.findViewById(R.id.linnn);
 
+
+
             linearLayout.setOnClickListener(this);
 
 

@@ -83,8 +83,14 @@ public class AtmActivity extends AppCompatActivity implements NavigationView.OnN
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        if (Banks.b == "null" && Places.p == "null") {
+            Methot_Toast();
+            Intent i = new Intent(AtmActivity.this,Places.class);
+            startActivity(i);
 
-        if (Banks.b == "Masr" && Places.p == "sheben") {
+        }
+
+       else if (Banks.b == "Masr" && Places.p == "sheben") {
             for (int i = 0; i < masr_sheben.length; i++) {
 
                 AtmModel atmModel = new AtmModel(masr_sheben[i]);
@@ -339,6 +345,11 @@ public class AtmActivity extends AppCompatActivity implements NavigationView.OnN
 
         } else if (id == R.id.callus) {
             Intent i = new Intent(AtmActivity.this,Call_US.class);
+            startActivity(i);
+
+        }
+        else if (id == R.id.call) {
+            Intent i = new Intent(AtmActivity.this,CallActivity.class);
             startActivity(i);
 
         }
