@@ -1,11 +1,11 @@
-package com.example.ok.atmfinder.Activities;
+package com.asmaa.ok.atmfinder.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.ok.atmfinder.R;
+import com.asmaa.ok.atmfinder.R;
 
 public class Splash extends AppCompatActivity {
 

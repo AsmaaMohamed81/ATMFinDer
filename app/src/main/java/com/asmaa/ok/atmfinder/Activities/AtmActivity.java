@@ -1,5 +1,7 @@
-package com.example.ok.atmfinder.Activities;
+package com.asmaa.ok.atmfinder.Activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -12,18 +14,17 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ok.atmfinder.Adapter.AtmAdapter;
-import com.example.ok.atmfinder.Call_US;
-import com.example.ok.atmfinder.Models.AtmModel;
-import com.example.ok.atmfinder.Models.NameBank;
-import com.example.ok.atmfinder.R;
+import com.asmaa.ok.atmfinder.Adapter.AtmAdapter;
+import com.asmaa.ok.atmfinder.Call_US;
+import com.asmaa.ok.atmfinder.Models.AtmModel;
+import com.asmaa.ok.atmfinder.Models.NameBank;
+import com.asmaa.ok.atmfinder.R;
 
 import java.util.ArrayList;
 
@@ -83,10 +84,31 @@ public class AtmActivity extends AppCompatActivity implements NavigationView.OnN
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        if (Banks.b == "null" && Places.p == "null") {
-            Methot_Toast();
-            Intent i = new Intent(AtmActivity.this,Places.class);
-            startActivity(i);
+        if (Banks.b == "null" || Places.p == "null") {
+            final AlertDialog.Builder alertadd = new AlertDialog.Builder(AtmActivity.this);
+            LayoutInflater factory = LayoutInflater.from(AtmActivity.this);
+            final View viewu = factory.inflate(R.layout.sample, null);
+            alertadd.setView(viewu);
+
+            alertadd.setNeutralButton("OK!", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dlg, int sumthin) {
+
+                    Intent i = new Intent(AtmActivity.this,Places.class);
+
+
+
+                    startActivity(i);
+
+                }
+            });
+            AlertDialog dialog = alertadd.create();
+            dialog.getWindow().getAttributes().windowAnimations = R.style.CustomAnimations_slide; //style id
+
+            dialog.show();
+
+           // dateall.setText("Choose date");
+
+
 
         }
 
@@ -281,6 +303,7 @@ public class AtmActivity extends AppCompatActivity implements NavigationView.OnN
 
         toast.setView(v);
         toast.show();
+
     }
 
     @Override
@@ -293,12 +316,12 @@ public class AtmActivity extends AppCompatActivity implements NavigationView.OnN
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main2, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main2, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

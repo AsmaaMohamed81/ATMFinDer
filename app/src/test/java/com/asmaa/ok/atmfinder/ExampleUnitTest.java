@@ -1,4 +1,4 @@
-package com.example.ok.atmfinder;
+package com.asmaa.ok.atmfinder;
 
 import org.junit.Test;
 

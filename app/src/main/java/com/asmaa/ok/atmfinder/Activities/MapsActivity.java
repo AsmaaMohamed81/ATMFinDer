@@ -1,11 +1,12 @@
-package com.example.ok.atmfinder.Activities;
+package com.asmaa.ok.atmfinder.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
 
-import com.example.ok.atmfinder.R;
+import com.asmaa.ok.atmfinder.Adapter.AtmAdapter;
+import com.asmaa.ok.atmfinder.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -13,9 +14,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import static com.example.ok.atmfinder.Adapter.AtmAdapter.lat;
-import static com.example.ok.atmfinder.Adapter.AtmAdapter.longit;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -58,7 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         adress.setText(adresss);
 
         // Add a marker in Sydney and move the camera
-        LatLng sheben = new LatLng(30.555114,31.010645);
+        LatLng sheben = new LatLng(AtmAdapter.lat,AtmAdapter.longit);
         mMap.addMarker(new MarkerOptions()
                 .position(sheben)
                 .title(Sname)

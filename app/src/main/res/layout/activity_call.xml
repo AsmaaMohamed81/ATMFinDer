@@ -18,7 +18,7 @@
     android:background="@drawable/background1"
 
 
-    tools:context="com.example.ok.atmfinder.Activities.CallActivity">
+    tools:context="com.asmaa.ok.atmfinder.Activities.CallActivity">
 
 
 <LinearLayout
@@ -26,7 +26,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
 
-    tools:context="com.example.ok.atmfinder.Activities.CallActivity">
+    tools:context="com.asmaa.ok.atmfinder.Activities.CallActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

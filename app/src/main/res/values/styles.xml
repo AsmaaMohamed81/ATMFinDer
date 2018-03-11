@@ -20,6 +20,13 @@
         <item name="homeAsUpIndicator">@drawable/ic_menu_manage</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_menu_manage</item>
     </style>
+    <style name="CustomAnimations"/>
+
+
+    <style name="CustomAnimations.slide">
+        <item name="android:windowEnterAnimation">@anim/slide_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_right</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

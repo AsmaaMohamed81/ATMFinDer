@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash1"
-    tools:context="com.example.ok.atmfinder.Activities.Splash">
+    tools:context="com.asmaa.ok.atmfinder.Activities.Splash">
 
 </android.support.constraint.ConstraintLayout>

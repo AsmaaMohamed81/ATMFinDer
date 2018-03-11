@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.ok.atmfinder.Activities.Main2Activity"
+    tools:context="com.asmaa.ok.atmfinder.Activities.Main2Activity"
     tools:showIn="@layout/app_bar_main2">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyAtm"

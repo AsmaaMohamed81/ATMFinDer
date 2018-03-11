@@ -1,25 +1,28 @@
-package com.example.ok.atmfinder.Activities;
+package com.asmaa.ok.atmfinder;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.ok.atmfinder.Call_US;
-import com.example.ok.atmfinder.R;
+import com.asmaa.ok.atmfinder.Activities.About_Us;
+import com.asmaa.ok.atmfinder.Activities.Banks;
+import com.asmaa.ok.atmfinder.Activities.CallActivity;
+import com.asmaa.ok.atmfinder.Activities.MapsActivity;
+import com.asmaa.ok.atmfinder.Activities.Places;
 
-public class About_Us extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Call_US extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about__us);
+        setContentView(R.layout.activity_call__us);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -45,12 +48,12 @@ public class About_Us extends AppCompatActivity implements NavigationView.OnNavi
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main2, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main2, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -74,28 +77,34 @@ public class About_Us extends AppCompatActivity implements NavigationView.OnNavi
 
         if (id == R.id.places) {
 
-            Intent i = new Intent(About_Us.this,Places.class);
+            Intent i = new Intent(Call_US.this,Places.class);
             startActivity(i);
 
 
         } else if (id == R.id.bank) {
-            Intent i = new Intent(About_Us.this,Banks.class);
+            Intent i = new Intent(Call_US.this,Banks.class);
             startActivity(i);
 
         } else if (id == R.id.map) {
-            Intent i = new Intent(About_Us.this,MapsActivity.class);
+            Intent i = new Intent(Call_US.this,MapsActivity.class);
             startActivity(i);
 
         } else if (id == R.id.share) {
-            Intent i = new Intent(About_Us.this,Places.class);
+            Intent i = new Intent(Call_US.this,Places.class);
             startActivity(i);
 
         } else if (id == R.id.we) {
-            Intent i = new Intent(About_Us.this,About_Us.class);
+            Intent i = new Intent(Call_US.this,About_Us.class);
             startActivity(i);
 
         } else if (id == R.id.callus) {
-            Intent i = new Intent(About_Us.this,Call_US.class);
+            Intent i = new Intent(Call_US.this,Call_US.class);
+            startActivity(i);
+
+        }
+
+        else if (id == R.id.call) {
+            Intent i = new Intent(Call_US.this,CallActivity.class);
             startActivity(i);
 
         }

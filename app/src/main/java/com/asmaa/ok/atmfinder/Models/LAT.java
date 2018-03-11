@@ -1,4 +1,4 @@
-package com.example.ok.atmfinder.Models;
+package com.asmaa.ok.atmfinder.Models;
 
 /**
  * Created by ok on 12/02/2018.

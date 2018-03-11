@@ -17,7 +17,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ok.atmfinder.Activities.Banks">
+    tools:context="com.asmaa.ok.atmfinder.Activities.Banks">
 
     <LinearLayout
         android:layout_marginTop="20dp"
