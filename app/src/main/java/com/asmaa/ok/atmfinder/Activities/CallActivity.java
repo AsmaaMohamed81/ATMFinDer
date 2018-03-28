@@ -188,8 +188,14 @@ TextView tbank1,tbank2,tbank3,tbank4,tbank5,tbank6,tbank7;
             startActivity(i);
 
         } else if (id == R.id.share) {
-            Intent i = new Intent(CallActivity.this,Places.class);
-            startActivity(i);
+            String text = "ATM Finder";
+            String link = "https://play.google.com/store/apps/details?id=com.asmaa.ok.atmfinder";
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT, text + "\n" + link);
+            intent.setType("text/plain");
+
+            startActivity(intent);
 
         } else if (id == R.id.we) {
             Intent i = new Intent(CallActivity.this,About_Us.class);
